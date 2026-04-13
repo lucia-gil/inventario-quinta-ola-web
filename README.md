@@ -49,7 +49,7 @@ Este repositorio contiene el desarrollo del Entregable 2 del proyecto "Inventari
 Simular la interfaz completa del sistema sin backend, priorizando estructura, diseño y experiencia de usuario.
 
 ## Equipo
-- Integrante 1
-- Integrante 2
-- Integrante 3
-- Integrante 4
+- PIMENTEL MELGAR, ALVARO BRANDON
+- GIL VIVANCO, LUCIA LEONOR
+- CASTILLO GRAZA, JENIFFER ALEXANDRA
+- LAM KAU, AURELIO ANDRE
