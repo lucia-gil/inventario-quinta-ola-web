@@ -3,15 +3,43 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ola-project</title>
 </head>
 
 <body>
-  <a class="bg-blue-500" href="./pages/home.html">home</a>
+  <nav class="flex flex-row gap-3 m-3 w-max text-white font-bold">
+    <!-- <a class="" href="/pages/home.html">home</a> -->
+    <div class="flex flex-col gap-1">
+      <a class="bg-amber-300 px-3 py-1 rounded-full h-min" href="/pages/profile.html">profile</a>
+      <a class="bg-amber-300 px-3 py-1 rounded-full h-min" href="/pages/dashboard.html">panel principal</a>
+      <a class="bg-amber-300 px-3 py-1 rounded-full h-min" href="/pages/inventory.html">inventario</a>
+      <a class="bg-amber-300 px-3 py-1 rounded-full h-min" href="/pages/transactions.html">transacciones</a>
+      <a class="bg-amber-300 px-3 py-1 rounded-full h-min" href="/pages/history.html">historia</a>
+      <a class="bg-amber-300 px-3 py-1 rounded-full h-min" href="/pages/analytics.html">analisis</a>
+    </div>
+    <div class="flex flex-col gap-1">
+      <a class="bg-teal-600 px-3 py-1 rounded-full h-min" href="/pages/admin-requests.html">admin requests</a>
+      <a class="bg-teal-600 px-3 py-1 rounded-full h-min" href="/pages/admin-items.html">admin items</a>
+      <a class="bg-teal-600 px-3 py-1 rounded-full h-min" href="/pages/admin-users.html">admin miembros</a>
+    </div>
+    <div class="flex flex-col gap-1">
+      <a class="bg-pink-600 px-3 py-1 rounded-full h-min" href="/pages/superadmin-permissions.html">superadmin
+        permisos</a>
+    </div>
+    <div class="flex flex-col gap-1">
+      <a class="bg-blue-500 px-3 py-1 rounded-full h-min" href="/pages/show-login.html">log in</a>
+      <a class="bg-blue-500 px-3 py-1 rounded-full h-min" href="/pages/show-signup.html">sign up</a>
+      <a class="bg-blue-500 px-3 py-1 rounded-full h-min" href="/pages/show-requestform.html">formulario de
+        transacción</a>
+    </div>
+    <div class="flex flex-col gap-1">
+      <a class="bg-gray-500 px-3 py-1 rounded-full h-min" href="/pages/home.html">home</a>
+    </div>
+  </nav>
   <!-- <div id="app"></div> -->
-  <script type="module" src="/src/main.ts"></script>
+  <script type="module" src="/src/main.ts" defer></script>
 </body>
 
 </html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System</title>
+    <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div id="content">
+        <!-- ---------------------------------------------------------------------- -->
+        <div class="*:space-y-6 md:grid-cols-3 grid gap-3 grid-cols-1">
+            <div class="bg-white shadow p-4 rounded-xl">
+                <h1 class="text-lg font-semibold text-gray-700">
+                    Distribución del inventario
+                </h1>
+                <canvas id="myChart00"></canvas>
+            </div>
+            <div class="bg-white shadow p-4 rounded-xl md:col-span-2 col-span-1">
+                <h1 class="text-lg font-semibold text-gray-700">
+                    Entradas y Salidas en la ultima Semana
+                </h1>
+                <canvas id="myChart01"></canvas>
+            </div>
+            <div class="bg-white shadow p-4 rounded-xl md:col-span-3 col-span-1">
+                <h1 class="text-lg font-semibold text-gray-700">
+                    Tramites en la ultima Semana por Estado
+                </h1>
+                <canvas id="myChart02" height="100"></canvas>
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------------------- -->
+    </div>
+    <script type="module" src="/src/analytics.ts"></script>
+</body>
+
+</html>

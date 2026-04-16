@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System</title>
+    <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div id="content">
+        <!-- ---------------------------------------------------------------------- -->
+        <div class="min-h-screen flex items-center justify-center bg-gray-50">
+            <div class="w-full max-w-md bg-white p-8 rounded-lg shadow relative">
+                <div class="absolute -top-10 left-1/2 -translate-x-1/2 block">
+                    <div
+                        class="w-20 h-20 rounded-full bg-blue-600 flex items-center justify-center text-white text-2xl font-bold shadow">
+                        ️<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor"
+                            class="bi bi-person-fill" viewBox="0 0 17 17">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                        </svg>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 mt-8 text-center">
+                    Login
+                </h2>
+
+                <form class="space-y-4">
+                    <div>
+                        <label class="text-sm text-gray-600">Email</label>
+                        <input type="email"
+                            class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="you@example.com" />
+                    </div>
+
+                    <div>
+                        <label class="text-sm text-gray-600">Password</label>
+                        <input type="password"
+                            class="w-full mt-1 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            placeholder="••••••••" />
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">
+                        Log in
+                    </button>
+                </form>
+
+                <p class="text-sm text-gray-600 text-center mt-4">
+                    Don’t have an account?
+                    <a href="/pages/show-signup.html" class="text-blue-600 hover:underline">Create one</a>
+                </p>
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------------------- -->
+    </div>
+</body>
+
+</html>

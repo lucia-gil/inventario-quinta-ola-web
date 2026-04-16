@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory System</title>
+    <link href="/src/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div id="content">
+        <div class="">
+            <!-- HEADER -->
+            <div class="flex justify-between items-end mb-6">
+
+                <div>
+                    <h1 class="text-2xl font-semibold text-gray-700">Administrar Materiales</h1>
+                    <p class="text-sm text-gray-400">Gestión de materiales y stock</p>
+                </div>
+
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    + Agregar Material
+                </button>
+
+            </div>
+
+            <!-- TABLE -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+
+                <table class="w-full text-sm">
+
+                    <!-- HEADER -->
+                    <thead class="bg-gray-50 border-b border-gray-200">
+                        <tr class="text-left text-gray-600">
+                            <th class="py-4 px-4">Nombre</th>
+                            <th class="py-4 px-4">Tags</th>
+                            <th class="py-4 px-4">Stock</th>
+                            <th class="py-4 px-4">Mínimo</th>
+                            <th class="py-4 px-4">Estado</th>
+                            <th class="py-4 px-4">Acciones</th>
+                        </tr>
+                    </thead>
+
+                    <!-- BODY -->
+                    <tbody class="divide-y divide-gray-200">
+
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Arena Fina</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">Construcción</span><span
+                                        class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-700">Seco</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">120 bolsas</td>
+                            <td class="py-4 px-4 text-gray-700">50</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">OK</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Grava</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">Construcción</span><span
+                                        class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">Pesado</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">80 bolsas</td>
+                            <td class="py-4 px-4 text-gray-700">40</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">OK</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Yeso</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-purple-100 text-purple-700">Acabados</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">15 bolsas</td>
+                            <td class="py-4 px-4 text-gray-700">30</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">Sin Stock</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Cal Hidratada</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">Construcción</span><span
+                                        class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">Químico</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">60 bolsas</td>
+                            <td class="py-4 px-4 text-gray-700">25</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">OK</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Clavos 2"</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">Ferretería</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">300 cajas</td>
+                            <td class="py-4 px-4 text-gray-700">100</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">OK</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Tornillos</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">Ferretería</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">50 cajas</td>
+                            <td class="py-4 px-4 text-gray-700">80</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-700">Stock
+                                    Bajo</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Madera Pino</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-700">Carpintería</span><span
+                                        class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">Natural</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">40 piezas</td>
+                            <td class="py-4 px-4 text-gray-700">30</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">OK</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Barniz</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-purple-100 text-purple-700">Acabados</span><span
+                                        class="px-2 py-1 text-xs rounded-full bg-pink-100 text-pink-700">Líquido</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">12 galones</td>
+                            <td class="py-4 px-4 text-gray-700">20</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-700">Stock
+                                    Bajo</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Cables Eléctricos</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">Electricidad</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">200 metros</td>
+                            <td class="py-4 px-4 text-gray-700">100</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">OK</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Interruptores</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">Electricidad</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">30 unidades</td>
+                            <td class="py-4 px-4 text-gray-700">50</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-700">Stock
+                                    Bajo</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">Pernos</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap gap-2"><span
+                                        class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">Ferretería</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-gray-700">500 unidades</td>
+                            <td class="py-4 px-4 text-gray-700">200</td>
+                            <td class="py-4 px-4"><span
+                                    class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">OK</span></td>
+                            <td class="py-4 px-4 space-x-3"><button
+                                    class="text-blue-500 hover:underline">Ver</button><button
+                                    class="text-yellow-500 hover:underline">Editar</button><button
+                                    class="text-red-500 hover:underline">Eliminar</button></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+        <script type="module" src="/src/admin-item.ts"></script>
+</body>
+
+</html>
