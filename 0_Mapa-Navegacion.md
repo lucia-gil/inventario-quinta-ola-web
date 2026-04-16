@@ -92,7 +92,7 @@ Las acciones como “aprobar”, “rechazar” o “enviar solicitud” no pers
 Se prioriza la claridad del flujo y la experiencia de usuario.
 
 ## 9. Resumen del Flujo
-´´´
+```
 Login
 │
 ├── Registro
@@ -104,4 +104,4 @@ Login
 ├── Encargado → Despacho
 │
 └── SuperAdmin → Dashboard → Reportes
-´´´
+```
