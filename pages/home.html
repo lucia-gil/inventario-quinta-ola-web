@@ -1,14 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Sistema de Inventario - Home</title>
+    <link href="/src/style.css" rel="stylesheet" />
+    <link href="/src/custom-styles.css" rel="stylesheet" />
 </head>
 
-<body>
-    Nada hecho tdv (landing page)
+<body class="bg-gray-100 font-sans">
+    <div id="content">
+        <!-- HEADER -->
+        <div class="header">
+            <h1 class="text-4xl font-bold text-gray-700">Sistema de Inventario</h1>
+            <p class="text-lg text-gray-400 mt-2">Gestión eficiente de materiales y transacciones</p>
+        </div>
+
+        <!-- FUNCIONALIDADES PRINCIPALES -->
+        <div class="features">
+            <div class="feature-card">
+                <h2 class="text-xl font-semibold text-gray-700">Gestión de Inventarios</h2>
+                <p class="text-gray-600">Mantén un control completo sobre los materiales en tu inventario.</p>
+                <a href="/pages/materials-list.html" class="feature-btn">Ver inventario</a>
+            </div>
+
+            <div class="feature-card">
+                <h2 class="text-xl font-semibold text-gray-700">Transacciones</h2>
+                <p class="text-gray-600">Registra las entradas y salidas de stock de manera eficiente.</p>
+                <a href="/pages/transactions.html" class="feature-btn">Ver transacciones</a>
+            </div>
+
+            <div class="feature-card">
+                <h2 class="text-xl font-semibold text-gray-700">Gestión de Privilegios</h2>
+                <p class="text-gray-600">Controla el acceso y los privilegios de los usuarios dentro del sistema.</p>
+                <a href="/pages/permissions.html" class="feature-btn">Ver privilegios</a>
+            </div>
+        </div>
+
+        <!-- BOTONES DE ACCESO -->
+        <div class="cta-buttons">
+            <a href="/pages/login.html" class="cta-btn">Iniciar sesión</a>
+            <a href="/pages/show-signup.html" class="cta-btn">Crear cuenta</a>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -1,14 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de Transacción - Inventario Quinta Ola</title>
+    <link href="/src/style.css" rel="stylesheet" />
+    <link href="/src/custom-styles.css" rel="stylesheet" />
 </head>
 
-<body>
-    Nada hecho tdv (formulario de transacción)
+<body class="bg-gray-100 font-sans">
+    <div id="content">
+        <!-- HEADER -->
+        <div class="header">
+            <h1 class="text-2xl font-semibold text-gray-700">Registrar Transacción</h1>
+            <p class="text-sm text-gray-400">Registra nuevas transacciones de materiales</p>
+        </div>
+
+        <!-- FORMULARIO -->
+        <div class="form-container">
+            <form class="transaction-form">
+                <div class="form-group">
+                    <label for="transaction-id" class="label">ID de Transacción</label>
+                    <input type="text" id="transaction-id" class="input-field" placeholder="TXN-XXXX" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="requester" class="label">Solicitante</label>
+                    <input type="text" id="requester" class="input-field" placeholder="Nombre del solicitante"
+                        required />
+                </div>
+
+                <div class="form-group">
+                    <label for="item" class="label">Material</label>
+                    <input type="text" id="item" class="input-field" placeholder="Nombre del material" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity" class="label">Cantidad</label>
+                    <input type="number" id="quantity" class="input-field" placeholder="Cantidad solicitada" required />
+                </div>
+
+                <div class="form-group">
+                    <label for="transaction-type" class="label">Tipo de Transacción</label>
+                    <select id="transaction-type" class="input-field" required>
+                        <option value="in">Entrada</option>
+                        <option value="out">Salida</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="status" class="label">Estado</label>
+                    <select id="status" class="input-field" required>
+                        <option value="pending">Pendiente</option>
+                        <option value="approved">Aprobada</option>
+                        <option value="rejected">Rechazada</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Registrar Transacción</button>
+                    <a href="/pages/transactions.html" class="cancel-btn">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 
 </html>
