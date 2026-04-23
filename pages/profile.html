@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System</title>
+    <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div id="content">
+        <!-- ---------------------------------------------------------------------- -->
+        <div class="flex gap-4 mb-6">
+            <a href="/pages/dashboard.html">Dashboard</a>
+            <a href="/pages/inventory.html">Inventario</a>
+            <a href="/pages/transactions.html">Transacciones</a>
+            <a href="/pages/history.html">Historial</a>
+            <a href="/pages/profile.html">Perfil</a>
+        </div>
+        
+        <div class="w-[70%] mx-auto space-y-6 bg-none block">
+            <!-- INFORMACIÓN PERSONAL -->
+            <div class="bg-white rounded-xl shadow p-6">
+                <!-- HEADER -->
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center">
+                        <span class="text-gray-500 text-sm">👤</span>
+                    </div>
+
+                    <div>
+                        <h2 class="text-lg font-semibold text-gray-700">
+                            Información Personal
+                        </h2>
+                        <p class="text-xs text-gray-400">
+                            Datos básicos del usuario
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FIELDS -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="text-xs text-gray-400">Nombre</label>
+                        <p class="text-gray-800 font-medium">Alvaro</p>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-400">Apellido</label>
+                        <p class="text-gray-800 font-medium">Gómez</p>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-400">Correo</label>
+                        <p class="text-gray-800 font-medium">
+                            alvaro@email.com
+                        </p>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-400">Nivel de acceso</label>
+                        <div class="mt-1">
+                            <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">
+                                Manager
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <a href="/login.html" class="block px-3 py-2 rounded-lg text-red-500 bg-red-50">
+                        Cerrar Sesión
+                    </a>
+                </div>
+            </div>
+
+            <!-- CAMBIAR CONTRASEÑA -->
+            <div class="bg-white rounded-xl shadow p-6">
+                <h2 class="text-lg font-semibold text-gray-700 mb-4">
+                    Cambiar Contraseña
+                </h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="text-xs text-gray-400">Contraseña actual</label>
+                        <input type="password"
+                            class="w-full mt-1 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200" />
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-400">Nueva contraseña</label>
+                        <input type="password"
+                            class="w-full mt-1 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200" />
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-400">Confirmar contraseña</label>
+                        <input type="password"
+                            class="w-full mt-1 px-3 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-200" />
+                    </div>
+
+                    <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600">
+                        Actualizar contraseña
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------------------- -->
+    </div>
+    <script type="module" src="/src/profile.ts"></script>
+</body>
+
+</html>

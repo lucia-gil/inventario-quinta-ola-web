@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-textMain font-sans;
+  }
+  h1 { @apply text-2xl font-bold text-textMain; }
+  h2 { @apply text-xl font-semibold text-textMain; }
+  a  { @apply transition-colors duration-200; }
+}
+
+@layer components {
+
+  /* BOTONES */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 cursor-pointer;
+  }
+  .btn-primary {
+    @apply btn bg-primary text-white hover:opacity-90;
+  }
+  .btn-secondary {
+    @apply btn border-2 border-secondary text-secondary hover:bg-secondary hover:text-white;
+  }
+  .btn-danger {
+    @apply btn bg-danger text-white hover:opacity-90;
+  }
+  .btn-warning {
+    @apply btn bg-warning text-textMain hover:opacity-90;
+  }
+
+  /* BADGES DE ESTADO */
+  .badge {
+    @apply px-3 py-1 rounded-pill text-xs font-semibold inline-block;
+  }
+  .badge-success  { @apply badge bg-green-100  text-success; }
+  .badge-warning  { @apply badge bg-yellow-100 text-yellow-700; }
+  .badge-danger   { @apply badge bg-red-100    text-danger; }
+  .badge-info     { @apply badge bg-cyan-100   text-info; }
+
+  /* INPUTS */
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg
+           focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent
+           transition duration-200;
+  }
+  .input-error {
+    @apply border-danger focus:ring-danger;
+  }
+
+  /* CARDS */
+  .card {
+    @apply bg-white rounded-xl shadow p-6;
+  }
+  .card-hover {
+    @apply card hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200;
+  }
+
+  /* TABLAS */
+  .table-header {
+    @apply bg-background text-textSecondary text-xs font-semibold uppercase tracking-wider px-4 py-3;
+  }
+  .table-row {
+    @apply border-t border-gray-100 hover:bg-gray-50 transition-colors duration-150;
+  }
+  .table-cell {
+    @apply px-4 py-3 text-sm text-textMain;
+  }
+}

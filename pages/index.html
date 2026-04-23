@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System</title>
+    <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+    <div class="min-h-screen bg-gray-100 flex flex-col">
+
+        <!-- NAVBAR -->
+        <nav class="bg-white shadow-md px-8 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold text-blue-600">Inventory System</h1>
+
+            <div class="flex gap-6 text-sm">
+                <a href="/pages/catalog.html" class="hover:text-blue-600">Catálogo</a>
+                <a href="/pages/cart.html" class="hover:text-blue-600">Carrito</a>
+                <a href="/pages/show-login.html" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    Login
+                </a>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <div class="flex flex-col items-center justify-center text-center flex-grow px-6">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">
+                Bienvenida al Sistema de Inventario de Quinta Ola
+            
+            </h2>
+
+            <p class="text-gray-500 mb-8 max-w-xl">
+                Gestiona materiales, visualiza productos y realiza solicitudes de forma rápida y eficiente.
+            </p>
+
+            <!-- BOTONES PRINCIPALES -->
+            <div class="flex gap-4 flex-wrap justify-center">
+
+                <a href="/pages/catalog.html"
+                    class="bg-white px-6 py-4 rounded-xl shadow hover:shadow-lg text-center w-48">
+                    <h3 class="font-semibold text-gray-700">🛍️ Catálogo</h3>
+                    <p class="text-sm text-gray-400">Explorar productos</p>
+                </a>
+
+                <a href="/pages/cart.html"
+                    class="bg-white px-6 py-4 rounded-xl shadow hover:shadow-lg text-center w-48">
+                    <h3 class="font-semibold text-gray-700">🛒 Carrito</h3>
+                    <p class="text-sm text-gray-400">Ver solicitudes</p>
+                </a>
+
+                <a href="/pages/show-login.html"
+                    class="bg-blue-500 text-white px-6 py-4 rounded-xl shadow hover:bg-blue-600 text-center w-48">
+                    <h3 class="font-semibold">🔐 Login</h3>
+                    <p class="text-sm">Acceder al sistema</p>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

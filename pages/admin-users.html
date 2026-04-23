@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inventory System</title>
+    <link href="/src/style.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <div id="content">
+        <!-- ---------------------------------------------------------------------- -->
+        <div class="">
+            <!-- HEADER -->
+            <div class="flex justify-between items-end mb-6">
+                <div>
+                    <h1 class="text-2xl font-semibold text-gray-700">
+                        Administrar Miembros
+                    </h1>
+                    <p class="text-sm text-gray-400">
+                        Control de acceso de los miembros
+                    </p>
+                </div>
+
+                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
+                    + Agregar Miembros
+                </button>
+            </div>
+
+            <!-- TABLE -->
+            <div class="bg-white rounded-xl shadow overflow-hidden">
+                <table class="w-full text-sm">
+                    <!-- HEADER -->
+                    <thead class="bg-gray-50 border-b border-gray-200">
+                        <tr class="text-left text-gray-600">
+                            <th class="py-4 px-4">Nombre</th>
+                            <th class="py-4 px-4">Correo</th>
+                            <th class="py-4 px-4">Visto últimamente</th>
+                            <th class="py-4 px-4">Nivel de acceso</th>
+                            <th class="py-4 px-4">Cambiar nivel</th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="divide-y divide-gray-200">
+                        <!-- ROW 1 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
+                                Juan Pérez
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                juan.perez@email.com
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                2026-04-15 · 10:42 AM
+                            </td>
+
+                            <td class="py-4 px-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">
+                                    Admin
+                                </span>
+                            </td>
+
+                            <td class="py-4 px-4">
+                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
+                                    <option>Manager</option>
+                                    <option>Viewer</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 2 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
+                                María López
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                maria.lopez@email.com
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                2026-04-14 · 6:18 PM
+                            </td>
+
+                            <td class="py-4 px-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">
+                                    Manager
+                                </span>
+                            </td>
+
+                            <td class="py-4 px-4">
+                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
+                                    <option>Manager</option>
+                                    <option>Viewer</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 3 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
+                                Carlos Ruiz
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                carlos.ruiz@email.com
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                2026-04-13 · 3:05 PM
+                            </td>
+
+                            <td class="py-4 px-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">
+                                    Viewer
+                                </span>
+                            </td>
+
+                            <td class="py-4 px-4">
+                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
+                                    <option>Manager</option>
+                                    <option>Viewer</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 4 -->
+                        <tr class="hover:bg-gray-50">
+                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
+                                Ana Torres
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                ana.torres@email.com
+                            </td>
+
+                            <td class="py-4 px-4 text-gray-600">
+                                2026-04-12 · 9:21 AM
+                            </td>
+
+                            <td class="py-4 px-4">
+                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">
+                                    Manager
+                                </span>
+                            </td>
+                            <td class="py-4 px-4">
+                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
+                                    <option>Manager</option>
+                                    <option>Viewer</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------------------- -->
+    </div>
+    <script type="module" src="/src/admin-users.ts"></script>
+</body>
+
+</html>

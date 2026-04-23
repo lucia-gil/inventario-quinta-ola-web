@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Quinta Ola</title>
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-background">
+
+  <!-- CONTENEDOR -->
+  <div class="grid md:grid-cols-2 w-full max-w-5xl shadow-xl rounded-2xl overflow-hidden">
+
+    <!-- 🖼️ LADO IZQUIERDO (IMAGEN + IDENTIDAD) -->
+    <div class="hidden md:flex relative">
+      <img 
+        src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-secondary/80"></div>
+
+      <div class="relative z-10 text-white p-10 flex flex-col justify-center">
+        <h2 class="text-3xl font-bold mb-4">Quinta Ola 💜</h2>
+        <p class="text-sm text-gray-200">
+          Tecnología con propósito. Gestiona recursos, conecta personas y genera impacto social.
+        </p>
+      </div>
+    </div>
+
+    <!-- 🔐 FORMULARIO -->
+    <div class="bg-white p-10 flex flex-col justify-center">
+
+      <h1 class="mb-2">Iniciar Sesión</h1>
+      <p class="text-textSecondary mb-6">
+        Accede a tu cuenta para continuar
+      </p>
+
+      <form class="space-y-4">
+
+        <!-- EMAIL -->
+        <div>
+          <label class="text-sm text-textSecondary">Correo electrónico</label>
+          <input type="email" class="input mt-1" placeholder="ejemplo@email.com">
+        </div>
+
+        <!-- PASSWORD -->
+        <div>
+          <label class="text-sm text-textSecondary">Contraseña</label>
+          <input type="password" class="input mt-1" placeholder="••••••••">
+        </div>
+
+        <!-- OPCIONES -->
+        <div class="flex justify-between items-center text-sm">
+          <label class="flex items-center gap-2">
+            <input type="checkbox">
+            Recordarme
+          </label>
+
+          <a href="/pages/show-signup.html" class="text-secondary font-medium hover:underline">
+            ¿Olvidaste tu contraseña?
+          </a>
+        </div>
+
+        <!-- BOTÓN -->
+        <button type="submit" class="btn-secondary w-full">
+          Ingresar
+        </button>
+
+      </form>
+
+      <!-- DIVISOR -->
+      <div class="flex items-center my-6">
+        <div class="flex-grow h-px bg-gray-200"></div>
+        <span class="px-3 text-xs text-textSecondary">o</span>
+        <div class="flex-grow h-px bg-gray-200"></div>
+      </div>
+
+      <!-- REGISTRO -->
+      <p class="text-sm text-center text-textSecondary">
+        ¿No tienes cuenta?
+        <a href="/pages/show-signup.html" class="text-secondary font-medium hover:underline">
+          Regístrate
+        </a>
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

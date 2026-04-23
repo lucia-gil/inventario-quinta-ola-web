@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quinta Ola</title>
+</head>
+
+<body class="bg-background text-textMain font-sans">
+
+    <div class="min-h-screen flex flex-col">
+
+        <!-- 💜 NAVBAR -->
+        <nav class="bg-white shadow px-8 py-4 flex justify-between items-center">
+            <h1 class="text-lg font-medium text-secondary">Quinta Ola</h1>
+
+            <div class="flex gap-6 text-sm items-center">
+                <a href="/pages/catalog.html" class="hover:text-primary">
+                    Catálogo
+                </a>
+
+                <a href="/pages/show-login.html" class="btn-primary">
+                    Login
+                </a>
+            </div>
+        </nav>
+
+        <!-- 💥 HERO -->
+        <div class="relative flex flex-col items-center justify-center text-center flex-grow px-6">
+
+            <!-- 🌄 FONDO -->
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                    class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-black/60"></div>
+            </div>
+
+            <!-- 🌟 CONTENIDO -->
+            <div class="relative z-10 max-w-2xl space-y-6">
+
+                <h2 class="text-4xl font-semibold text-white">
+                    Bienvenido al Sistema de Inventario de Quinta Ola
+                </h2>
+
+                <p class="text-sm text-gray-200">
+                    Gestiona materiales, visualiza productos y realiza solicitudes de forma rápida y eficiente.
+                </p>
+
+                <!-- 🚀 ACCIONES -->
+                <div class="flex gap-6 flex-wrap justify-center mt-6">
+
+                    <!-- 🛍️ CATÁLOGO -->
+                    <a href="/pages/catalog.html" class="card-hover w-56 text-center">
+                        <h3 class="font-medium text-textMain mb-1">🛍️ Catálogo</h3>
+                        <p class="text-xs text-textSecondary">Explorar productos</p>
+                    </a>
+
+                    <!-- 🔐 LOGIN -->
+                    <a href="/pages/show-login.html" class="btn-primary px-6 py-4 w-56 text-center">
+                        🔐 Acceder al sistema
+                    </a>
+
+                </div>
+
+                <!-- 💜 DEMO -->
+                <div class="mt-10 text-center space-y-2">
+                    <p class="text-xs text-gray-300">Modo demostración</p>
+
+                    <div class="flex gap-4 justify-center flex-wrap text-sm">
+                        <a href="/pages/dashboard.html" class="text-accent hover:opacity-80">
+                            Dashboard
+                        </a>
+                        <a href="/pages/inventory.html" class="text-accent hover:opacity-80">
+                            Inventario
+                        </a>
+                        <a href="/pages/transactions.html" class="text-accent hover:opacity-80">
+                            Transacciones
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ⚡ VITE -->
+    <script type="module" src="/src/main.ts"></script>
+
+</body>
+</html>
