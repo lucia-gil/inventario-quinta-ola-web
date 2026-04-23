@@ -29,6 +29,16 @@
   .btn-warning {
     @apply btn bg-warning text-textMain hover:opacity-90;
   }
+  /* BOTÓN ROSA → HOVER MORADO */
+  .btn-accent {
+    @apply btn bg-accent text-white hover:bg-secondary;
+  }
+
+  /* BOTÓN MORADO → HOVER ROSA */
+  .btn-secondary-alt {
+    @apply btn bg-secondary text-white hover:bg-accent;
+  }
+
 
   /* BADGES DE ESTADO */
   .badge {

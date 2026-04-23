@@ -27,7 +27,7 @@
         </nav>
 
         <!-- 💥 HERO -->
-        <div class="relative flex flex-col items-center justify-center text-center flex-grow px-6">
+        <div class="relative flex flex-col items-center justify-center text-center min-h-[80vh] px-6">
 
             <!-- 🌄 FONDO -->
             <div class="absolute inset-0">
@@ -37,7 +37,7 @@
             </div>
 
             <!-- 🌟 CONTENIDO -->
-            <div class="relative z-10 max-w-2xl space-y-6">
+            <div class="relative z-10 max-w-5xl w-full space-y-6">
 
                 <h2 class="text-4xl font-semibold text-white">
                     Bienvenido al Sistema de Inventario de Quinta Ola
@@ -48,17 +48,17 @@
                 </p>
 
                 <!-- 🚀 ACCIONES -->
-                <div class="flex gap-6 flex-wrap justify-center mt-6">
+                <div class="grid md:grid-cols-2 gap-6 mt-6 w-full max-w-3xl mx-auto">
 
                     <!-- 🛍️ CATÁLOGO -->
-                    <a href="/pages/catalog.html" class="card-hover w-56 text-center">
-                        <h3 class="font-medium text-textMain mb-1">🛍️ Catálogo</h3>
-                        <p class="text-xs text-textSecondary">Explorar productos</p>
+                    <a href="/pages/catalog.html" class="btn-secondary-alt px-6 py-4 text-center text-white">
+                        <h3 class="font-medium mb-1">Catálogo</h3>
+                        <p class="text-xs opacity-80">Explorar productos</p>
                     </a>
 
                     <!-- 🔐 LOGIN -->
-                    <a href="/pages/show-login.html" class="btn-primary px-6 py-4 w-56 text-center">
-                        🔐 Acceder al sistema
+                    <a href="/pages/show-login.html" class="btn-accent px-8 py-3 mt-4 inline-block">
+                        Acceder al sistema
                     </a>
 
                 </div>
@@ -83,6 +83,57 @@
             </div>
 
         </div>
+
+        <!-- 🧾 SECCIÓN BENEFICIOS -->
+        <section class="bg-white py-20 px-6">
+            <div class="max-w-6xl mx-auto text-center space-y-10">
+
+                <h2 class="text-2xl font-medium">¿Qué puedes hacer en Quinta Ola?</h2>
+
+                <div class="grid md:grid-cols-3 gap-8 mt-8">
+
+                    <div class="card-hover">
+                        <h3 class="font-medium mb-2">📦 Gestionar inventario</h3>
+                        <p class="text-sm text-textSecondary">
+                            Control total de materiales en tiempo real.
+                        </p>
+                    </div>
+
+                    <div class="card-hover">
+                        <h3 class="font-medium mb-2">📊 Visualizar datos</h3>
+                        <p class="text-sm text-textSecondary">
+                            Analiza el uso de recursos fácilmente.
+                        </p>
+                    </div>
+
+                    <div class="card-hover">
+                        <h3 class="font-medium mb-2">⚡ Solicitudes rápidas</h3>
+                        <p class="text-sm text-textSecondary">
+                            Flujo eficiente para pedidos internos.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 🚀 CTA FINAL -->
+        <section class="bg-background py-20 px-6 text-center">
+            <div class="space-y-8">
+
+                <h2 class="text-xl font-medium">Empieza ahora</h2>
+
+                <p class="text-sm text-textSecondary">
+                    Accede al sistema y optimiza la gestión de tu inventario.
+                </p>
+
+                <a href="/pages/show-login.html" class="btn-accent px-8 py-3">
+                    Ingresar
+                </a>
+
+            </div>
+        </section>
 
     </div>
 
