@@ -1,1 +1,137 @@
 @import "tailwindcss";
+
+@theme {
+  --color-text: oklch(24.78% 0.000 89.88);
+  --color-background: oklch(100.00% 0.000 89.88);
+
+  --color-primary-50: oklch(95.24% 0.031 333.94);
+  --color-primary-100: oklch(90.40% 0.064 334.32);
+  --color-primary-200: oklch(81.49% 0.128 335.30);
+  --color-primary-300: oklch(73.54% 0.191 337.27);
+  --color-primary-400: oklch(67.35% 0.242 339.07);
+  --color-primary-500: oklch(63.34% 0.266 341.14);
+  --color-primary-600: oklch(53.76% 0.225 341.21);
+  --color-primary-700: oklch(43.61% 0.180 340.97);
+  --color-primary-800: oklch(32.91% 0.133 339.87);
+  --color-primary-900: oklch(21.30% 0.082 339.12);
+  --color-primary-950: oklch(14.61% 0.053 337.30);
+
+  --color-secondary-50: oklch(93.60% 0.033 295.31);
+  --color-secondary-100: oklch(87.31% 0.068 295.25);
+  --color-secondary-200: oklch(74.67% 0.140 292.54);
+  --color-secondary-300: oklch(62.76% 0.209 288.93);
+  --color-secondary-400: oklch(52.72% 0.265 282.42);
+  --color-secondary-500: oklch(46.55% 0.296 272.62);
+  --color-secondary-600: oklch(39.56% 0.249 273.45);
+  --color-secondary-700: oklch(32.19% 0.201 274.40);
+  --color-secondary-800: oklch(24.38% 0.149 276.26);
+  --color-secondary-900: oklch(16.04% 0.091 282.71);
+  --color-secondary-950: oklch(11.64% 0.058 289.44);
+
+  --color-accent-50: oklch(93.99% 0.037 308.02);
+  --color-accent-100: oklch(88.22% 0.074 307.11);
+  --color-accent-200: oklch(76.92% 0.150 306.19);
+  --color-accent-300: oklch(66.48% 0.221 303.86);
+  --color-accent-400: oklch(58.17% 0.273 300.23);
+  --color-accent-500: oklch(52.94% 0.293 293.61);
+  --color-accent-600: oklch(44.94% 0.248 294.31);
+  --color-accent-700: oklch(36.45% 0.200 294.91);
+  --color-accent-800: oklch(27.57% 0.150 296.78);
+  --color-accent-900: oklch(17.75% 0.095 300.18);
+  --color-accent-950: oklch(12.59% 0.065 306.33);
+
+  /* DARK */
+
+  --color-dark-text: oklch(90.06% 0.000 89.88);
+  --color-dark-background: oklch(27.8% 0.033 256.848);
+
+  --color-dark-primary-50: oklab(14.61% 0.049 -0.02);
+  --color-dark-primary-100: oklab(21.30% 0.077 -0.03);
+  --color-dark-primary-200: oklab(32.91% 0.125 -0.05);
+  --color-dark-primary-300: oklab(43.61% 0.170 -0.06);
+  --color-dark-primary-400: oklab(53.76% 0.213 -0.07);
+  --color-dark-primary-500: oklab(63.34% 0.252 -0.09);
+  --color-dark-primary-600: oklab(67.35% 0.226 -0.09);
+  --color-dark-primary-700: oklab(73.54% 0.176 -0.07);
+  --color-dark-primary-800: oklab(81.49% 0.117 -0.05);
+  --color-dark-primary-900: oklab(90.40% 0.058 -0.03);
+  --color-dark-primary-950: oklab(95.24% 0.028 -0.01);
+
+  --color-dark-secondary-50: oklab(11.64% 0.019 -0.05);
+  --color-dark-secondary-100: oklab(16.04% 0.020 -0.09);
+  --color-dark-secondary-200: oklab(24.38% 0.016 -0.15);
+  --color-dark-secondary-300: oklab(32.19% 0.015 -0.20);
+  --color-dark-secondary-400: oklab(39.56% 0.015 -0.25);
+  --color-dark-secondary-500: oklab(46.55% 0.014 -0.30);
+  --color-dark-secondary-600: oklab(52.72% 0.057 -0.26);
+  --color-dark-secondary-700: oklab(62.76% 0.068 -0.20);
+  --color-dark-secondary-800: oklab(74.67% 0.053 -0.13);
+  --color-dark-secondary-900: oklab(87.31% 0.029 -0.06);
+  --color-dark-secondary-950: oklab(93.60% 0.014 -0.03);
+
+  --color-dark-accent-50: oklab(12.59% 0.038 -0.05);
+  --color-dark-accent-100: oklab(17.75% 0.048 -0.08);
+  --color-dark-accent-200: oklab(27.57% 0.068 -0.13);
+  --color-dark-accent-300: oklab(36.45% 0.084 -0.18);
+  --color-dark-accent-400: oklab(44.94% 0.102 -0.23);
+  --color-dark-accent-500: oklab(52.94% 0.117 -0.27);
+  --color-dark-accent-600: oklab(58.17% 0.137 -0.24);
+  --color-dark-accent-700: oklab(66.48% 0.123 -0.18);
+  --color-dark-accent-800: oklab(76.92% 0.089 -0.12);
+  --color-dark-accent-900: oklab(88.22% 0.045 -0.06);
+  --color-dark-accent-950: oklab(93.99% 0.023 -0.03);
+
+  /* --background-image-linear-primary-secondary: linear-gradient(#eb24bc, #d4c8fe);
+  --background-image-linear-primary-accent: linear-gradient(#eb24bc, #a64dff);
+  --background-image-linear-secondary-accent: linear-gradient(#d4c8fe, #a64dff);
+
+  --background-image-radial-primary-secondary: radial-gradient(#eb24bc, #d4c8fe);
+  --background-image-radial-primary-accent: radial-gradient(#eb24bc, #a64dff);
+  --background-image-radial-secondary-accent: radial-gradient(#d4c8fe, #a64dff); */
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text font-sans;
+  }
+
+  h1 {
+    @apply text-2xl font-bold text-text;
+  }
+
+  h2 {
+    @apply text-xl font-semibold text-text;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+
+@utility btn-primary {
+  &.btn {
+    @apply bg-primary-500 text-white hover:bg-white hover:text-primary-500 hover:border-2 hover:border-primary-500;
+  }
+}
+
+@utility btn-danger {
+  @apply bg-red-500 text-white hover:bg-white hover:text-red-500 hover:border-2 hover:border-red-500;
+}
+
+@utility btn-success {
+  @apply bg-teal-500 text-white hover:bg-white hover:text-teal-500 hover:border-2 hover:border-green-400;
+}
+
+@layer components {
+
+  /* BOTONES */
+  .btn {
+    @apply m-4 max-w-3xs flex flex-col justify-center text-center rounded-lg font-semibold cursor-pointer box-border h-10;
+  }
+
+  /* BADGES DE ESTADO */
+  /* INPUTS */
+  /* CARDS */
+  /* TABLAS */
+}
