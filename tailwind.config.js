@@ -18,9 +18,12 @@ export default {
         textMain:       "#343a40",
         textSecondary:  "#6c757d",
       },
+
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        title: ["Poppins", "sans-serif"],
       },
+
       borderRadius: {
         pill: "9999px",
       }
