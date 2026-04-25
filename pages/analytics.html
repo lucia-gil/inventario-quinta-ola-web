@@ -1,39 +1,120 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory System</title>
+    <title>Análisis de Inventario | Quinta Ola</title>
     <link href="/src/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-gray-100 font-sans">
-    <div id="content">
-        <!-- ---------------------------------------------------------------------- -->
-        <div class="*:space-y-6 md:grid-cols-3 grid gap-3 grid-cols-1">
-            <div class="bg-white shadow p-4 rounded-xl">
-                <h1 class="text-lg font-semibold text-gray-700">
-                    Distribución del inventario
-                </h1>
-                <canvas id="myChart00"></canvas>
-            </div>
-            <div class="bg-white shadow p-4 rounded-xl md:col-span-2 col-span-1">
-                <h1 class="text-lg font-semibold text-gray-700">
-                    Entradas y Salidas en la ultima Semana
-                </h1>
-                <canvas id="myChart01"></canvas>
-            </div>
-            <div class="bg-white shadow p-4 rounded-xl md:col-span-3 col-span-1">
-                <h1 class="text-lg font-semibold text-gray-700">
-                    Tramites en la ultima Semana por Estado
-                </h1>
-                <canvas id="myChart02" height="100"></canvas>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col pt-20">
+
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm px-8 py-3 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <div class="flex items-center">
+            <a href="/pages/home.html">
+                <img src="../img/QuintaOlaLogo.png" alt="Quinta Ola Logo" class="h-14 w-auto object-contain" />
+            </a>
+        </div>
+
+        <div class="hidden md:flex gap-6 text-sm items-center">
+            <a href="/pages/dashboard.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Dashboard
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/transactions.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Transacciones
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/inventory.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Inventario
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/history.html" class="relative text-accent font-semibold group">
+                Historial
+                <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-accent transition-all duration-300"></span>
+            </a>
+
+            <div class="ml-4 flex items-center gap-3 pl-4 border-l border-gray-200">
+                <div class="text-right hidden lg:block">
+                    <p class="text-sm font-semibold text-gray-700 leading-none">Alvaro Gómez</p>
+                    <p class="text-[11px] text-gray-500 mt-1">Administrador</p>
+                </div>
+                <a href="/pages/profile.html" class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors">
+                    <i data-lucide="user" class="w-5 h-5"></i>
+                </a>
             </div>
         </div>
-        <!-- ---------------------------------------------------------------------- -->
-    </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10 w-full space-y-8">
+        
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div>
+                <h1 class="text-3xl font-bold text-secondary flex items-center gap-3">
+                    <div class="p-2 bg-accent/10 rounded-xl">
+                        <i data-lucide="bar-chart-2" class="w-7 h-7 text-accent"></i>
+                    </div>
+                    Análisis de Inventario
+                </h1>
+                <p class="text-sm text-gray-500 mt-2 pl-14">Métricas, rendimiento y visualización de datos del sistema.</p>
+            </div>
+            
+            <a href="/pages/history.html" class="bg-white border border-gray-200 text-gray-600 hover:text-accent hover:border-accent/50 px-4 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-sm flex items-center gap-2">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Historial
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:col-span-1 flex flex-col h-full">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-lg font-bold text-gray-800">Distribución</h2>
+                    <div class="p-2 bg-pink-50 text-accent rounded-lg">
+                        <i data-lucide="pie-chart" class="w-5 h-5"></i>
+                    </div>
+                </div>
+                <div class="relative w-full flex-grow flex items-center justify-center min-h-[250px]">
+                    <canvas id="myChart00"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:col-span-2 flex flex-col h-full">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-lg font-bold text-gray-800">Entradas y Salidas <span class="text-sm font-normal text-gray-400 ml-2">(Última Semana)</span></h2>
+                    <div class="p-2 bg-blue-50 text-blue-600 rounded-lg">
+                        <i data-lucide="trending-up" class="w-5 h-5"></i>
+                    </div>
+                </div>
+                <div class="relative w-full flex-grow flex items-center justify-center min-h-[250px]">
+                    <canvas id="myChart01"></canvas>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:col-span-3 flex flex-col">
+                <div class="flex items-center justify-between mb-6">
+                    <h2 class="text-lg font-bold text-gray-800">Trámites por Estado <span class="text-sm font-normal text-gray-400 ml-2">(Última Semana)</span></h2>
+                    <div class="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
+                        <i data-lucide="activity" class="w-5 h-5"></i>
+                    </div>
+                </div>
+                <div class="relative w-full flex items-center justify-center">
+                    <canvas id="myChart02" height="100"></canvas>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
     <script type="module" src="/src/analytics.ts"></script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

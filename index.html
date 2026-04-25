@@ -12,7 +12,6 @@
 
     <div class="min-h-screen flex flex-col pt-20">
 
-        <!--  NAVBAR -->
         <nav class="bg-white/90 backdrop-blur-md shadow px-8 py-3 flex justify-between items-center fixed top-0 left-0 w-full z-50">
             <div class="flex items-center">
                 <img src="img/QuintaOlaLogo.png" alt="Quinta Ola - Sistema Inteligente de Inventario" class="h-14 w-auto object-contain" />
@@ -34,7 +33,6 @@
             </div>
         </nav>
 
-        <!--  HERO -->
         <div id="top" class="relative flex flex-col items-center justify-center text-center min-h-[80vh] px-6">
 
             <div class="absolute inset-0">
@@ -74,22 +72,27 @@
                     <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Modo demostración</p>
 
                     <div class="flex gap-6 justify-center flex-wrap text-sm">
-                        <a href="/pages/dashboard.html" class="text-gray-200 hover:text-white hover:underline transition">
-                            Dashboard
+                        <a href="/pages/home.html" class="text-gray-200 hover:text-white hover:underline transition">
+                            Home
                         </a>
-                        <a href="/pages/inventory.html" class="text-gray-200 hover:text-white hover:underline transition">
-                            Inventario
+                      
+                        <a href="/pages/admin-users.html" class="text-gray-200 hover:text-accent hover:underline transition font-medium">
+                            Admin Usuarios
                         </a>
-                        <a href="/pages/transactions.html" class="text-gray-200 hover:text-white hover:underline transition">
-                            Transacciones
+                        <a href="/pages/superadmin-permissions.html" class="text-gray-200 hover:text-accent hover:underline transition font-medium">
+                            Permisos Superadmin
                         </a>
+
+                        <a href="/pages/404.html" class="text-gray-200 hover:text-accent hover:underline transition font-medium">
+                            Error
+                        </a>
+
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <!-- 🧾 SECCIÓN BENEFICIOS -->
         <section class="py-24 px-6 bg-gray-50 border-t border-gray-200">
             <div class="max-w-6xl mx-auto text-center">
 
@@ -171,7 +174,6 @@
             </div>
         </section>
 
-        <!-- 🚀 CTA FINAL -->
         <section class="relative py-24 px-6 bg-gray-900 overflow-hidden">
             <div class="absolute inset-0 opacity-20 pointer-events-none">
                 <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-accent blur-[100px]"></div>
@@ -253,10 +255,8 @@
             </div>
         </footer>
 
-
     </div>
 
-    <!-- ⚡ VITE -->
     <script type="module" src="/src/main.ts"></script>
 
     <script>

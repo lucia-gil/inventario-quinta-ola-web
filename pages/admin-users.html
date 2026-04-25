@@ -1,165 +1,214 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory System</title>
+    <title>Administrar Miembros | Quinta Ola</title>
     <link href="/src/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-gray-100 font-sans">
-    <div id="content">
-        <!-- ---------------------------------------------------------------------- -->
-        <div class="">
-            <!-- HEADER -->
-            <div class="flex justify-between items-end mb-6">
-                <div>
-                    <h1 class="text-2xl font-semibold text-gray-700">
-                        Administrar Miembros
-                    </h1>
-                    <p class="text-sm text-gray-400">
-                        Control de acceso de los miembros
-                    </p>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col pt-20">
+
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm px-8 py-3 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <div class="flex items-center">
+            <a href="/pages/home.html">
+                <img src="../img/QuintaOlaLogo.png" alt="Quinta Ola Logo" class="h-14 w-auto object-contain" />
+            </a>
+        </div>
+
+        <div class="hidden md:flex gap-6 text-sm items-center">
+            <a href="/pages/dashboard.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Dashboard
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/transactions.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Transacciones
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/inventory.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Inventario
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/history.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Historial
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/admin-users.html" class="relative text-accent font-semibold group">
+                Miembros
+                <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-accent transition-all duration-300"></span>
+            </a>
+
+            <div class="ml-4 flex items-center gap-3 pl-4 border-l border-gray-200">
+                <div class="text-right hidden lg:block">
+                    <p class="text-sm font-semibold text-gray-700 leading-none">Alvaro Gómez</p>
+                    <p class="text-[11px] text-gray-500 mt-1">Administrador</p>
                 </div>
-
-                <button class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                    + Agregar Miembros
-                </button>
+                <a href="/pages/profile.html" class="h-10 w-10 rounded-full bg-accent/10 flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors">
+                    <i data-lucide="user" class="w-5 h-5"></i>
+                </a>
             </div>
+        </div>
+    </nav>
 
-            <!-- TABLE -->
-            <div class="bg-white rounded-xl shadow overflow-hidden">
-                <table class="w-full text-sm">
-                    <!-- HEADER -->
-                    <thead class="bg-gray-50 border-b border-gray-200">
-                        <tr class="text-left text-gray-600">
-                            <th class="py-4 px-4">Nombre</th>
-                            <th class="py-4 px-4">Correo</th>
-                            <th class="py-4 px-4">Visto últimamente</th>
-                            <th class="py-4 px-4">Nivel de acceso</th>
-                            <th class="py-4 px-4">Cambiar nivel</th>
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10 w-full space-y-6">
+        
+        <div class="flex justify-between items-center">
+            <div>
+                <h1 class="text-3xl font-bold text-secondary">Administrar Miembros</h1>
+                <p class="text-sm text-gray-500 mt-1">Control de acceso y gestión de usuarios del sistema.</p>
+            </div>
+            <button class="bg-accent hover:bg-pink-600 text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition-all shadow-sm flex items-center gap-2">
+                <i data-lucide="user-plus" class="w-4 h-4"></i> Agregar Miembro
+            </button>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-50/50 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        <tr>
+                            <th class="py-4 px-6">Miembro</th>
+                            <th class="py-4 px-6">Correo Electrónico</th>
+                            <th class="py-4 px-6">Última Conexión</th>
+                            <th class="py-4 px-6">Nivel Actual</th>
+                            <th class="py-4 px-6">Cambiar Nivel</th>
                         </tr>
                     </thead>
-
-                    <tbody class="divide-y divide-gray-200">
-                        <!-- ROW 1 -->
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
-                                Juan Pérez
+                    <tbody class="divide-y divide-gray-100 text-sm">
+                        
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-xs font-bold text-red-600">JP</div>
+                                    <span class="font-semibold text-gray-800">Juan Pérez</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                juan.perez@email.com
+                            <td class="py-4 px-6 text-gray-600">juan.perez@email.com</td>
+                            <td class="py-4 px-6 text-gray-500">
+                                <div class="flex items-center gap-1.5">
+                                    <i data-lucide="clock" class="w-3.5 h-3.5 text-gray-400"></i>
+                                    2026-04-15 <span class="text-gray-400">· 10:42 AM</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                2026-04-15 · 10:42 AM
-                            </td>
-
-                            <td class="py-4 px-4">
-                                <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">
+                            <td class="py-4 px-6">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-red-50 text-red-600 border border-red-100">
                                     Admin
                                 </span>
                             </td>
-
-                            <td class="py-4 px-4">
-                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
-                                    <option>Manager</option>
-                                    <option>Viewer</option>
+                            <td class="py-4 px-6">
+                                <select class="w-32 px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer">
+                                    <option value="admin" selected>Admin</option>
+                                    <option value="manager">Manager</option>
+                                    <option value="viewer">Viewer</option>
                                 </select>
                             </td>
                         </tr>
 
-                        <!-- ROW 2 -->
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
-                                María López
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-600">ML</div>
+                                    <span class="font-semibold text-gray-800">María López</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                maria.lopez@email.com
+                            <td class="py-4 px-6 text-gray-600">maria.lopez@email.com</td>
+                            <td class="py-4 px-6 text-gray-500">
+                                <div class="flex items-center gap-1.5">
+                                    <i data-lucide="clock" class="w-3.5 h-3.5 text-gray-400"></i>
+                                    2026-04-14 <span class="text-gray-400">· 6:18 PM</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                2026-04-14 · 6:18 PM
-                            </td>
-
-                            <td class="py-4 px-4">
-                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">
+                            <td class="py-4 px-6">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 border border-blue-100">
                                     Manager
                                 </span>
                             </td>
-
-                            <td class="py-4 px-4">
-                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
-                                    <option>Manager</option>
-                                    <option>Viewer</option>
+                            <td class="py-4 px-6">
+                                <select class="w-32 px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer">
+                                    <option value="admin">Admin</option>
+                                    <option value="manager" selected>Manager</option>
+                                    <option value="viewer">Viewer</option>
                                 </select>
                             </td>
                         </tr>
 
-                        <!-- ROW 3 -->
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
-                                Carlos Ruiz
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-600">CR</div>
+                                    <span class="font-semibold text-gray-800">Carlos Ruiz</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                carlos.ruiz@email.com
+                            <td class="py-4 px-6 text-gray-600">carlos.ruiz@email.com</td>
+                            <td class="py-4 px-6 text-gray-500">
+                                <div class="flex items-center gap-1.5">
+                                    <i data-lucide="clock" class="w-3.5 h-3.5 text-gray-400"></i>
+                                    2026-04-13 <span class="text-gray-400">· 3:05 PM</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                2026-04-13 · 3:05 PM
-                            </td>
-
-                            <td class="py-4 px-4">
-                                <span class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">
+                            <td class="py-4 px-6">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600 border border-gray-200">
                                     Viewer
                                 </span>
                             </td>
-
-                            <td class="py-4 px-4">
-                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
-                                    <option>Manager</option>
-                                    <option>Viewer</option>
+                            <td class="py-4 px-6">
+                                <select class="w-32 px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer">
+                                    <option value="admin">Admin</option>
+                                    <option value="manager">Manager</option>
+                                    <option value="viewer" selected>Viewer</option>
                                 </select>
                             </td>
                         </tr>
 
-                        <!-- ROW 4 -->
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-4 px-4 font-medium text-gray-800 text-base">
-                                Ana Torres
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-4 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-600">AT</div>
+                                    <span class="font-semibold text-gray-800">Ana Torres</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                ana.torres@email.com
+                            <td class="py-4 px-6 text-gray-600">ana.torres@email.com</td>
+                            <td class="py-4 px-6 text-gray-500">
+                                <div class="flex items-center gap-1.5">
+                                    <i data-lucide="clock" class="w-3.5 h-3.5 text-gray-400"></i>
+                                    2026-04-12 <span class="text-gray-400">· 9:21 AM</span>
+                                </div>
                             </td>
-
-                            <td class="py-4 px-4 text-gray-600">
-                                2026-04-12 · 9:21 AM
-                            </td>
-
-                            <td class="py-4 px-4">
-                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">
+                            <td class="py-4 px-6">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 border border-blue-100">
                                     Manager
                                 </span>
                             </td>
-                            <td class="py-4 px-4">
-                                <select class="border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700">
-                                    <option>Manager</option>
-                                    <option>Viewer</option>
+                            <td class="py-4 px-6">
+                                <select class="w-32 px-3 py-1.5 bg-gray-50 border border-gray-200 rounded-lg text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-accent/20 focus:border-accent transition-all cursor-pointer">
+                                    <option value="admin">Admin</option>
+                                    <option value="manager" selected>Manager</option>
+                                    <option value="viewer">Viewer</option>
                                 </select>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
+            
+            <div class="px-6 py-4 bg-gray-50 border-t border-gray-100 flex items-center justify-between">
+                <p class="text-xs text-gray-500">Mostrando 4 miembros registrados</p>
+            </div>
         </div>
-        <!-- ---------------------------------------------------------------------- -->
-    </div>
+
+    </main>
+
     <script type="module" src="/src/admin-users.ts"></script>
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>

@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data: {
                 labels: ['Materiales', 'Herramientas', 'Equipos', 'Otros'],
                 datasets: [{
-                    data: [450, 25, 20, 10],
+                    data: [45, 25, 20, 10],
                     backgroundColor: [
                         '#db2777', // bg-pink-600 (Accent)
                         '#3b82f6', // bg-blue-500

@@ -4,101 +4,213 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - QuintaOla</title>
+    <title>Dashboard | Quinta Ola</title>
     <link href="/src/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-50 text-gray-800 font-sans scroll-smooth min-h-screen flex flex-col pt-20">
 
-    <!-- NAVBAR -->
-    <div class="bg-white shadow px-8 py-4 flex justify-between items-center sticky top-0 z-50">
-        <h1 class="text-xl font-bold text-blue-600"> Quinta Ola</h1>
-
-        <div class="flex gap-6 text-gray-600 font-medium">
-            <a href="/pages/dashboard.html" class="hover:text-blue-600">Dashboard</a>
-            <a href="/pages/transactions.html" class="hover:text-blue-600">Transacciones</a>
-            <a href="/pages/show-requestform.html" class="hover:text-blue-600">Nueva</a>
-            <a href="/pages/profile.html" class="hover:text-blue-600">Perfil</a>
-            <a href="/pages/superadmin-permissions.html" class="hover:text-blue-600">Permisos</a>
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm px-8 py-3 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <div class="flex items-center">
+            <img src="../img/QuintaOlaLogo.png" alt="Quinta Ola Logo" class="h-14 w-auto object-contain" />
+            <span class="sr-only">Quinta Ola</span>
         </div>
-    </div>
 
-    <!-- HERO -->
-    <div class="text-center mt-16 px-6">
-        <h2 class="text-5xl font-bold text-gray-800 mb-4">
-            Sistema de Inventario
-        </h2>
-        <p class="text-gray-500 text-lg max-w-xl mx-auto">
-            Controla, gestiona y optimiza el flujo de materiales en tiempo real.
-            Todo en un solo lugar, rápido y eficiente.
-        </p>
-
-        <div class="mt-8 flex justify-center gap-4">
-            <a href="/pages/show-requestform.html"
-                class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 shadow transition">
-                + Nueva Transacción
+        <div class="hidden md:flex gap-6 text-sm items-center">
+            
+            <a href="/pages/dashboard.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Dashboard
+                <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-accent transition-all duration-300"></span>
             </a>
 
-            <a href="/pages/transactions.html"
-                class="bg-white border px-6 py-3 rounded-lg hover:bg-gray-50 shadow transition">
-                Ver Transacciones
+            <a href="/pages/transactions.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Historial
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
             </a>
+
+            <a href="/pages/show-requestform.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Solicitar Material
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/superadmin-permissions.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Permisos
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <div class="ml-4 flex items-center gap-3 pl-4 border-l border-gray-200">
+                <span class="text-sm font-medium text-gray-700">Hola, Usuario</span>
+                <a href="/pages/profile.html" class="h-9 w-9 rounded-full bg-accent/10 flex items-center justify-center text-accent hover:bg-accent hover:text-white transition-colors shadow-sm">
+                    <i data-lucide="user" class="w-4 h-4"></i>
+                </a>
+            </div>
+
         </div>
-    </div>
+    </nav>
 
-    <!-- STATS -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-[80%] mx-auto mt-14">
-
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <p class="text-gray-400 text-sm">Transacciones</p>
-            <h3 class="text-3xl font-bold text-gray-800 mt-2">128</h3>
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10 w-full">
+        
+        <div class="text-center md:text-left md:flex md:items-center md:justify-between bg-white p-8 rounded-2xl shadow-sm border border-gray-100 mb-10">
+            <div>
+                <h2 class="text-3xl font-bold text-secondary mb-2">
+                    Resumen de Inventario
+                </h2>
+                <p class="text-gray-500 text-base max-w-2xl">
+                    Controla, gestiona y optimiza el flujo de materiales de Quinta Ola. Todo en un solo lugar, rápido y eficiente.
+                </p>
+            </div>
+            
+            <div class="mt-6 md:mt-0 flex flex-col sm:flex-row gap-3">
+                <a href="/pages/transactions.html"
+                    class="inline-flex justify-center items-center px-5 py-2.5 border border-gray-300 shadow-sm text-sm font-medium rounded-lg text-secondary bg-white hover:bg-gray-50 transition-all">
+                    <i data-lucide="list" class="w-4 h-4 mr-2"></i>
+                    Ver Historial
+                </a>
+                <a href="/pages/show-requestform.html"
+                    class="inline-flex justify-center items-center px-5 py-2.5 shadow-sm text-sm font-medium rounded-lg text-white bg-accent hover:opacity-90 transition-all">
+                    <i data-lucide="plus-circle" class="w-4 h-4 mr-2"></i>
+                    Nueva Solicitud
+                </a>
+            </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <p class="text-gray-400 text-sm">Items en inventario</p>
-            <h3 class="text-3xl font-bold text-gray-800 mt-2">54</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition">
+                <div class="p-3 rounded-lg bg-blue-100 text-blue-600">
+                    <i data-lucide="arrow-right-left" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-500">Transacciones del mes</p>
+                    <h3 class="text-2xl font-bold text-gray-900">128</h3>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition">
+                <div class="p-3 rounded-lg bg-pink-100 text-pink-600">
+                    <i data-lucide="package" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-500">Items en inventario</p>
+                    <h3 class="text-2xl font-bold text-gray-900">54</h3>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex items-center gap-4 hover:shadow-md transition">
+                <div class="p-3 rounded-lg bg-green-100 text-green-600">
+                    <i data-lucide="check-circle" class="w-6 h-6"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-medium text-gray-500">Solicitudes Aprobadas</p>
+                    <h3 class="text-2xl font-bold text-gray-900">42</h3>
+                </div>
+            </div>
         </div>
 
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-            <p class="text-gray-400 text-sm">Usuarios activos</p>
-            <h3 class="text-3xl font-bold text-gray-800 mt-2">12</h3>
+        <h3 class="text-lg font-bold text-secondary mb-4">Accesos Rápidos</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <a href="/pages/transactions.html" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i data-lucide="clipboard-list" class="w-16 h-16 text-secondary"></i>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-secondary mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-base font-semibold text-gray-900 mb-1">Mi Historial</h3>
+                <p class="text-sm text-gray-500">Visualiza tus movimientos</p>
+            </a>
+
+            <a href="/pages/show-requestform.html" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i data-lucide="shopping-cart" class="w-16 h-16 text-secondary"></i>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-secondary mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-base font-semibold text-gray-900 mb-1">Solicitar Material</h3>
+                <p class="text-sm text-gray-500">Registra un nuevo pedido</p>
+            </a>
+
+            <a href="/pages/profile.html" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i data-lucide="user-cog" class="w-16 h-16 text-secondary"></i>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-secondary mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <i data-lucide="user-cog" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-base font-semibold text-gray-900 mb-1">Mi Perfil</h3>
+                <p class="text-sm text-gray-500">Gestiona tus datos</p>
+            </a>
+
+            <a href="/pages/superadmin-permissions.html" class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-lg transition-all group relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
+                    <i data-lucide="shield-check" class="w-16 h-16 text-secondary"></i>
+                </div>
+                <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center text-secondary mb-4 group-hover:bg-accent group-hover:text-white transition-colors">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                </div>
+                <h3 class="text-base font-semibold text-gray-900 mb-1">Permisos</h3>
+                <p class="text-sm text-gray-500">Control de accesos (Admin)</p>
+            </a>
+
         </div>
 
-    </div>
+    </main>
 
-    <!-- CARDS -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-[80%] mx-auto mt-10">
+    <footer class="bg-gray-950 text-gray-400 border-t border-gray-800 pt-16 pb-8 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-10 text-sm mb-12">
 
-        <a href="/pages/transactions.html"
-            class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition block">
-            <h3 class="text-lg font-semibold text-gray-700 mb-2">📊 Transacciones</h3>
-            <p class="text-sm text-gray-400">Visualiza movimientos de inventario</p>
-        </a>
+            <div class="md:col-span-2 space-y-5">
+                <div class="flex items-center">
+                    <img src="../img/QuintaOlaLogo.png" alt="Quinta Ola Logo" class="h-14 w-auto object-contain" />
+                    <span class="sr-only">Quinta Ola</span>
+                </div>
+                <p class="max-w-sm leading-relaxed text-gray-400">
+                    Sistema de gestión de inventarios interno. Facilitando el control y acceso de materiales para todos los proyectos de Quinta Ola.
+                </p>
+                
+                <div class="flex gap-3 pt-2 text-gray-400">
+                    <a href="#" class="hover:text-white transition-colors p-2 bg-gray-900 rounded-full hover:bg-accent border border-gray-800 hover:border-accent">
+                        <i data-lucide="instagram" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition-colors p-2 bg-gray-900 rounded-full hover:bg-green-500 border border-gray-800 hover:border-green-500">
+                        <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
 
-        <a href="/pages/show-requestform.html"
-            class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition block">
-            <h3 class="text-lg font-semibold text-gray-700 mb-2">➕ Registrar</h3>
-            <p class="text-sm text-gray-400">Crear nueva transacción</p>
-        </a>
+            <div class="space-y-4">
+                <h4 class="text-white font-semibold uppercase tracking-wider text-xs">Menú Principal</h4>
+                <ul class="space-y-3">
+                    <li><a href="/pages/dashboard.html" class="hover:text-accent transition-colors block">Dashboard</a></li>
+                    <li><a href="/pages/transactions.html" class="hover:text-accent transition-colors block">Mi Historial</a></li>
+                    <li><a href="/pages/show-requestform.html" class="hover:text-accent transition-colors block">Solicitar Material</a></li>
+                    <li><a href="/pages/inventory.html" class="hover:text-accent transition-colors block">Ver Inventario</a></li>
+                </ul>
+            </div>
 
-        <a href="/pages/profile.html"
-            class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition block">
-            <h3 class="text-lg font-semibold text-gray-700 mb-2">👤 Perfil</h3>
-            <p class="text-sm text-gray-400">Gestiona tu cuenta</p>
-        </a>
+            <div class="space-y-4">
+                <h4 class="text-white font-semibold uppercase tracking-wider text-xs">Mi Cuenta</h4>
+                <ul class="space-y-3">
+                    <li><a href="/pages/profile.html" class="hover:text-accent transition-colors block">Configurar Perfil</a></li>
+                    <li><a href="#" class="hover:text-accent transition-colors block">Notificaciones</a></li>
+                    <li><a href="../index.html" class="hover:text-red-400 transition-colors block flex items-center gap-1 mt-6">
+                        <i data-lucide="log-out" class="w-4 h-4"></i> Cerrar Sesión
+                    </a></li>
+                </ul>
+            </div>
 
-        <a href="/pages/superadmin-permissions.html"
-            class="bg-white p-6 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition block">
-            <h3 class="text-lg font-semibold text-gray-700 mb-2">🔐 Permisos</h3>
-            <p class="text-sm text-gray-400">Control de accesos</p>
-        </a>
+        </div>
 
-    </div>
+        <div class="max-w-6xl mx-auto px-6 border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+            <p>© 2026 Quinta Ola. Todos los derechos reservados.</p>
+            <p>Gestión Interna de Inventarios</p>
+        </div>
+    </footer>
 
-    <!-- FOOTER -->
-    <div class="text-center text-gray-400 text-sm mt-16 mb-6">
-        © 2026 Quinta Ola Inventario
-    </div>
-
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>

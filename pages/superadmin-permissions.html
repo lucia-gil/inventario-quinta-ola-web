@@ -1,220 +1,260 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inventory System</title>
+    <title>Permisos Superadmin | Quinta Ola</title>
     <link href="/src/style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
-<body class="bg-gray-100 font-sans">
-    <div id="content">
-        <!-- ---------------------------------------------------------------------- -->
-        <div class="flex gap-4 mb-6">
-            <a href="/pages/dashboard.html">Dashboard</a>
-            <a href="/pages/inventory.html">Inventario</a>
-            <a href="/pages/transactions.html">Transacciones</a>
-            <a href="/pages/history.html">Historial</a>
-            <a href="/pages/profile.html">Perfil</a>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col pt-20">
+
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm px-8 py-3 flex justify-between items-center fixed top-0 left-0 w-full z-50">
+        <div class="flex items-center">
+            <a href="/pages/home.html">
+                <img src="../img/QuintaOlaLogo.png" alt="Quinta Ola Logo" class="h-14 w-auto object-contain" />
+            </a>
         </div>
+
+        <div class="hidden md:flex gap-6 text-sm items-center">
+            <a href="/pages/dashboard.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Dashboard
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/transactions.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Transacciones
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/inventory.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Inventario
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/admin-users.html" class="relative text-secondary hover:text-accent transition font-medium group">
+                Miembros
+                <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-accent transition-all duration-300 group-hover:w-full"></span>
+            </a>
+
+            <a href="/pages/superadmin-permissions.html" class="relative text-accent font-semibold group">
+                Permisos (SA)
+                <span class="absolute left-0 -bottom-1 w-full h-[2px] bg-accent transition-all duration-300"></span>
+            </a>
+
+            <div class="ml-4 flex items-center gap-3 pl-4 border-l border-gray-200">
+                <div class="text-right hidden lg:block">
+                    <p class="text-sm font-semibold text-gray-700 leading-none">Super Admin</p>
+                    <p class="text-[11px] text-accent mt-1 font-medium">Control Total</p>
+                </div>
+                <a href="/pages/profile.html" class="h-10 w-10 rounded-full bg-accent text-white shadow-sm flex items-center justify-center hover:bg-pink-600 transition-colors">
+                    <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow max-w-7xl mx-auto px-6 py-10 w-full space-y-8">
         
-        <div class="">
-            <!-- HEADER -->
-            <div class="mb-6">
-                <h1 class="text-2xl font-semibold text-gray-700">
-                    Gestión de Privilegios
-                </h1>
-                <p class="text-sm text-gray-400">
-                    Control granular de permisos por usuario
+        <div>
+            <h1 class="text-3xl font-bold text-secondary flex items-center gap-3">
+                <i data-lucide="key" class="w-8 h-8 text-accent"></i>
+                Gestión de Privilegios
+            </h1>
+            <p class="text-sm text-gray-500 mt-2 pl-11">Control granular de permisos y accesos específicos por usuario.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col h-full transition-transform hover:-translate-y-1 duration-300">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-gray-100 text-gray-600 rounded-lg">
+                        <i data-lucide="eye" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-lg font-bold text-gray-800">Viewer</h2>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-4 flex-grow">
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-600 border border-gray-200">item.view</span>
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-gray-100 text-gray-600 border border-gray-200">transaction.view</span>
+                </div>
+                <p class="text-xs text-gray-500 font-medium pt-3 border-t border-gray-100">
+                    Solo lectura del sistema.
                 </p>
             </div>
 
-            <!-- ROLE INFO CARDS -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-                <!-- VIEWER -->
-                <div class="bg-white rounded-xl shadow p-5">
-                    <h2 class="text-lg font-semibold text-gray-700 mb-3">
-                        Viewer
-                    </h2>
-
-                    <div class="flex flex-col gap-2">
-                        <span class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700 w-fit">item.view</span>
-                        <span
-                            class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700 w-fit">transaction.view</span>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col h-full transition-transform hover:-translate-y-1 duration-300">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-blue-100 text-blue-600 rounded-lg">
+                        <i data-lucide="briefcase" class="w-5 h-5"></i>
                     </div>
-
-                    <p class="text-xs text-gray-400 mt-4">
-                        Solo lectura del sistema
-                    </p>
+                    <h2 class="text-lg font-bold text-gray-800">Manager</h2>
                 </div>
-
-                <!-- MANAGER -->
-                <div class="bg-white rounded-xl shadow p-5">
-                    <h2 class="text-lg font-semibold text-gray-700 mb-3">
-                        Manager
-                    </h2>
-
-                    <div class="flex flex-col gap-2">
-                        <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700 w-fit">item.create</span>
-                        <span
-                            class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700 w-fit">transaction.create</span>
-                        <span
-                            class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700 w-fit">transaction.request</span>
-                    </div>
-
-                    <p class="text-xs text-gray-400 mt-4">
-                        Puede operar inventario y solicitar cambios
-                    </p>
+                <div class="flex flex-wrap gap-2 mb-4 flex-grow">
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-50 text-blue-600 border border-blue-100">item.create</span>
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-50 text-blue-600 border border-blue-100">transaction.create</span>
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-blue-50 text-blue-600 border border-blue-100">transaction.request</span>
                 </div>
-
-                <!-- ADMIN -->
-                <div class="bg-white rounded-xl shadow p-5">
-                    <h2 class="text-lg font-semibold text-gray-700 mb-3">
-                        Admin
-                    </h2>
-
-                    <div class="flex flex-col gap-2">
-                        <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700 w-fit">item.*</span>
-                        <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700 w-fit">transaction.*</span>
-                        <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700 w-fit">user.manage</span>
-                    </div>
-
-                    <p class="text-xs text-gray-400 mt-4">
-                        Control total del sistema
-                    </p>
-                </div>
+                <p class="text-xs text-gray-500 font-medium pt-3 border-t border-gray-100">
+                    Puede operar inventario y solicitar cambios.
+                </p>
             </div>
 
-            <!-- TABLE -->
-            <div class="bg-white rounded-xl shadow overflow-hidden">
-                <table class="w-full text-sm">
-                    <thead class="bg-gray-50 border-b border-gray-200">
-                        <tr class="text-left text-gray-600">
-                            <th class="py-4 px-4">Nombre</th>
-                            <th class="py-4 px-4">Nivel de acceso</th>
-                            <th class="py-4 px-4">Privilegios agregados</th>
-                            <th class="py-4 px-4">Privilegios revocados</th>
-                            <th class="py-4 px-4">Acciones</th>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 flex flex-col h-full transition-transform hover:-translate-y-1 duration-300">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="p-2 bg-purple-100 text-purple-600 rounded-lg">
+                        <i data-lucide="shield-check" class="w-5 h-5"></i>
+                    </div>
+                    <h2 class="text-lg font-bold text-gray-800">Admin</h2>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-4 flex-grow">
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-purple-50 text-purple-600 border border-purple-100">item.*</span>
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-purple-50 text-purple-600 border border-purple-100">transaction.*</span>
+                    <span class="px-2.5 py-1 text-xs font-semibold rounded-full bg-purple-50 text-purple-600 border border-purple-100">user.manage</span>
+                </div>
+                <p class="text-xs text-gray-500 font-medium pt-3 border-t border-gray-100">
+                    Control total del sistema.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-left border-collapse">
+                    <thead class="bg-gray-50/50 text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                        <tr>
+                            <th class="py-4 px-6">Miembro</th>
+                            <th class="py-4 px-6">Nivel Base</th>
+                            <th class="py-4 px-6">Privilegios Agregados</th>
+                            <th class="py-4 px-6">Privilegios Revocados</th>
+                            <th class="py-4 px-6 text-center">Acciones</th>
                         </tr>
                     </thead>
-
-                    <tbody class="divide-y divide-gray-200">
-                        <!-- ROW 1 -->
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-6 px-4 font-medium text-gray-800 text-base">
-                                Juan Pérez
+                    <tbody class="divide-y divide-gray-100 text-sm">
+                        
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-5 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center text-xs font-bold text-purple-600">JP</div>
+                                    <span class="font-semibold text-gray-800">Juan Pérez</span>
+                                </div>
                             </td>
-
-                            <td class="py-6 px-4">
-                                <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">
+                            <td class="py-5 px-6">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-purple-50 text-purple-600 border border-purple-100">
                                     Admin
                                 </span>
                             </td>
-
-                            <td class="py-6 px-4">
+                            <td class="py-5 px-6">
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">item.delete</span>
-                                    <span
-                                        class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">user.manage</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                        <i data-lucide="plus" class="w-3 h-3"></i> item.delete
+                                    </span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                        <i data-lucide="plus" class="w-3 h-3"></i> user.manage
+                                    </span>
                                 </div>
                             </td>
-
-                            <td class="py-6 px-4">
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">none</span>
-                                </div>
+                            <td class="py-5 px-6">
+                                <span class="text-xs text-gray-400 italic">Ninguno</span>
                             </td>
-
-                            <td class="py-6 px-4 space-x-3">
-                                <button class="text-green-600 hover:underline">
-                                    Agregar privilegio
-                                </button>
-                                <button class="text-red-600 hover:underline">
-                                    Revocar privilegio
-                                </button>
+                            <td class="py-5 px-6">
+                                <div class="flex items-center justify-center gap-3">
+                                    <button class="text-emerald-500 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 p-1.5 rounded-lg transition-colors tooltip" title="Agregar Privilegio">
+                                        <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                                    </button>
+                                    <button class="text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 p-1.5 rounded-lg transition-colors tooltip" title="Revocar Privilegio">
+                                        <i data-lucide="minus-circle" class="w-5 h-5"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
 
-                        <!-- ROW 2 -->
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-6 px-4 font-medium text-gray-800 text-base">
-                                María López
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-5 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-600">ML</div>
+                                    <span class="font-semibold text-gray-800">María López</span>
+                                </div>
                             </td>
-
-                            <td class="py-6 px-4">
-                                <span class="px-2 py-1 text-xs rounded-full bg-blue-100 text-blue-700">
+                            <td class="py-5 px-6">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-600 border border-blue-100">
                                     Manager
                                 </span>
                             </td>
-
-                            <td class="py-6 px-4">
+                            <td class="py-5 px-6">
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">transaction.create</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                        <i data-lucide="plus" class="w-3 h-3"></i> transaction.create
+                                    </span>
                                 </div>
                             </td>
-
-                            <td class="py-6 px-4">
+                            <td class="py-5 px-6">
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">transaction.approve</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-full bg-red-50 text-red-600 border border-red-100">
+                                        <i data-lucide="minus" class="w-3 h-3"></i> transaction.approve
+                                    </span>
                                 </div>
                             </td>
-
-                            <td class="py-6 px-4 space-x-3">
-                                <button class="text-green-600 hover:underline">
-                                    Agregar privilegio
-                                </button>
-                                <button class="text-red-600 hover:underline">
-                                    Revocar privilegio
-                                </button>
+                            <td class="py-5 px-6">
+                                <div class="flex items-center justify-center gap-3">
+                                    <button class="text-emerald-500 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 p-1.5 rounded-lg transition-colors tooltip" title="Agregar Privilegio">
+                                        <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                                    </button>
+                                    <button class="text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 p-1.5 rounded-lg transition-colors tooltip" title="Revocar Privilegio">
+                                        <i data-lucide="minus-circle" class="w-5 h-5"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
 
-                        <!-- ROW 3 -->
-                        <tr class="hover:bg-gray-50">
-                            <td class="py-6 px-4 font-medium text-gray-800 text-base">
-                                Carlos Ruiz
+                        <tr class="hover:bg-gray-50 transition-colors">
+                            <td class="py-5 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-xs font-bold text-gray-600">CR</div>
+                                    <span class="font-semibold text-gray-800">Carlos Ruiz</span>
+                                </div>
                             </td>
-
-                            <td class="py-6 px-4">
-                                <span class="px-2 py-1 text-xs rounded-full bg-gray-200 text-gray-700">
+                            <td class="py-5 px-6">
+                                <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-gray-100 text-gray-600 border border-gray-200">
                                     Viewer
                                 </span>
                             </td>
-
-                            <td class="py-6 px-4">
+                            <td class="py-5 px-6">
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">item.view</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-full bg-emerald-50 text-emerald-600 border border-emerald-100">
+                                        <i data-lucide="plus" class="w-3 h-3"></i> item.view
+                                    </span>
                                 </div>
                             </td>
-
-                            <td class="py-6 px-4">
+                            <td class="py-5 px-6">
                                 <div class="flex flex-wrap gap-2">
-                                    <span
-                                        class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">transaction.create</span>
+                                    <span class="inline-flex items-center gap-1 px-2.5 py-1 text-xs font-semibold rounded-full bg-red-50 text-red-600 border border-red-100">
+                                        <i data-lucide="minus" class="w-3 h-3"></i> transaction.create
+                                    </span>
                                 </div>
                             </td>
-
-                            <td class="py-6 px-4 space-x-3">
-                                <button class="text-green-600 hover:underline">
-                                    Agregar privilegio
-                                </button>
-                                <button class="text-red-600 hover:underline">
-                                    Revocar privilegio
-                                </button>
+                            <td class="py-5 px-6">
+                                <div class="flex items-center justify-center gap-3">
+                                    <button class="text-emerald-500 hover:text-emerald-700 bg-emerald-50 hover:bg-emerald-100 p-1.5 rounded-lg transition-colors tooltip" title="Agregar Privilegio">
+                                        <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                                    </button>
+                                    <button class="text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 p-1.5 rounded-lg transition-colors tooltip" title="Revocar Privilegio">
+                                        <i data-lucide="minus-circle" class="w-5 h-5"></i>
+                                    </button>
+                                </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <!-- ---------------------------------------------------------------------- -->
-    </div>
+    </main>
+
     <script type="module" src="/src/superadmin-permissions.ts"></script>
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+    </script>
 </body>
 
 </html>
